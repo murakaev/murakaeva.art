@@ -16,3 +16,14 @@ body {
   color: var(--black);
   font-family: var(--font-serif);
 }
+
+/* Animations */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
