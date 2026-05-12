@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/hero.css" />
   </head>
   <body>
     <header>
@@ -30,5 +31,15 @@
         </ul>
       </nav>
     </header>
+    <main>
+      <section class="hero" id="hero">
+        <!-- .hero__tickers are injected via ticker.js -->
+        <div class="hero__scroll">
+          <span class="hero__scroll-label">прокрутить</span>
+          <div class="hero__scroll-line"></div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>
