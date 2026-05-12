@@ -1,0 +1,22 @@
+:root {
+  --bg: #f9f7f4;
+  --black: #1a1814;
+  --gray: #6b6560;
+  --accent: #c8a882;
+  --line: #e4e0da;
+
+  --font-serif: "Lora", Georgia, serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --pad-x: 6vw;
+  --section-py: 96px;
+  --nav-h: 64px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --pad-x: 20px;
+    --section-py: 64px;
+    --nav-h: 60px;
+  }
+}
