@@ -1,0 +1,16 @@
+.footer {
+  padding: 28px var(--pad-x);
+  border-top: 0.5px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__copyright,
+.footer__development,
+.footer__domain {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--gray);
+}

@@ -1,19 +1,19 @@
 const TICKER_CONFIG = [
   {
     modifier: "ticker--firstname",
-    text: "Светлана",
+    text: "Светлана\u00a0",
     direction: "right",
     speed: 22,
   },
   {
     modifier: "ticker--lastname",
-    text: "Муракаева",
+    text: "Муракаева\u00a0",
     direction: "left",
     speed: 16,
   },
   {
     modifier: "ticker--sub",
-    text: "художник\u00a0\u00a0·\u00a0\u00a0абстракция",
+    text: "художник\u00a0\u00a0·\u00a0\u00a0абстракция\u00a0\u00a0·\u00a0\u00a0",
     direction: "right",
     speed: 30,
   },

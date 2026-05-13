@@ -6,11 +6,12 @@
   position: relative;
   padding-top: var(--nav-h);
   padding-bottom: var(--nav-h);
+  animation: fadeIn 0.8s ease 0.8s both;
 }
 
 .hero__tickers {
   position: absolute;
-  top: 50%;
+  top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100vw;
@@ -63,8 +64,8 @@
   font-size: 16vw;
   font-weight: 700;
   line-height: 0.9;
-  letter-spacing: -0.03em;
   color: var(--black);
+  padding-bottom: 4vw;
 }
 
 .ticker--sub .ticker__item {
@@ -83,5 +84,97 @@
   font-style: normal;
   font-size: 0.45em;
   vertical-align: middle;
-  margin: 0 0.1em;
+  margin: 0;
+}
+
+.hero__meta {
+  position: absolute;
+  bottom: 3vw;
+  left: var(--pad-x);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: fadeIn 0.8s ease 1s both;
+}
+
+.hero__meta-item {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+.hero__meta-item--accent {
+  color: var(--accent);
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: 28px;
+  right: var(--pad-x);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: fadeIn 0.8s ease 1.1s both;
+}
+
+.hero__scroll-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gray);
+  writing-mode: vertical-rl;
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 44px;
+  background: var(--accent);
+  transform-origin: top;
+  animation: lineGrow 2s ease-in-out 1.5s infinite;
+}
+
+@media (max-width: 768px) {
+  .ticker--firstname .ticker__item {
+    font-size: 24vw;
+  }
+
+  .ticker--lastname .ticker__item {
+    font-size: 30vw;
+    padding-bottom: 8vw;
+  }
+
+  .ticker--sub .ticker__item {
+    font-size: 2.8vw;
+    padding-top: 2.2vw;
+    padding-bottom: 1.8vw;
+  }
+
+  /* Метa и скролл — прибиваем к низу через flex вместо absolute */
+  .hero__scroll {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .hero__scroll-line {
+    height: 64px;
+  }
+}
+
+@media (max-width: 400px) {
+  .ticker--firstname .ticker__item {
+    font-size: 18vw;
+  }
+
+  .ticker--lastname .ticker__item {
+    font-size: 25vw;
+  }
+
+  .ticker--sub .ticker__item {
+    font-size: 3.2vw;
+  }
 }

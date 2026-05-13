@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/footer.css" />
   </head>
   <body>
     <header>
@@ -34,12 +35,23 @@
     <main>
       <section class="hero" id="hero">
         <!-- .hero__tickers are injected via ticker.js -->
+        <div class="hero__meta">
+          <span class="hero__meta-item">20 работ</span>
+          <span class="hero__meta-item hero__meta-item--accent"
+            >абстракция · 2026</span
+          >
+        </div>
         <div class="hero__scroll">
           <span class="hero__scroll-label">прокрутить</span>
           <div class="hero__scroll-line"></div>
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <span class="footer__development">developed by { murakaev }</span>
+      <span class="footer__copyright">© 2026 Светлана Муракаева</span>
+      <span class="footer__domain">murakaeva.art</span>
+    </footer>
     <script type="module" src="js/main.js"></script>
   </body>
 </html>
