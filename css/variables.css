@@ -12,11 +12,3 @@
   --section-py: 96px;
   --nav-h: 64px;
 }
-
-@media (max-width: 768px) {
-  :root {
-    --pad-x: 20px;
-    --section-py: 64px;
-    --nav-h: 60px;
-  }
-}

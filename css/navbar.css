@@ -16,6 +16,8 @@
 }
 
 .nav__logo {
+  display: flex;
+  align-items: center;
   font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.18em;
@@ -31,11 +33,14 @@
 
 .nav__list {
   display: flex;
+  align-items: center;
   gap: 36px;
   list-style: none;
 }
 
 .nav__link {
+  display: flex;
+  align-items: center;
   font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.14em;
@@ -47,20 +52,4 @@
 
 .nav__link:hover {
   color: var(--black);
-}
-
-/* Adaptive */
-
-@media (max-width: 560px) {
-  .nav__logo {
-    font-size: 10px;
-  }
-
-  .nav__list {
-    gap: 16px;
-  }
-
-  .nav__link {
-    font-size: 10px;
-  }
 }

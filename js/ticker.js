@@ -4,18 +4,21 @@ const TICKER_CONFIG = [
     text: "Светлана\u00a0",
     direction: "right",
     speed: 22,
+    dot: true,
   },
   {
     modifier: "ticker--lastname",
     text: "Муракаева\u00a0",
     direction: "left",
     speed: 16,
+    dot: true,
   },
   {
     modifier: "ticker--sub",
-    text: "художник\u00a0\u00a0·\u00a0\u00a0абстракция\u00a0\u00a0·\u00a0\u00a0",
+    text: "художник\u00a0\u00a0·\u00a0\u00a0абстракционист\u00a0\u00a0·\u00a0\u00a0",
     direction: "right",
     speed: 30,
+    dot: false,
   },
 ];
 
@@ -34,7 +37,9 @@ function buildTicker(config) {
   for (let i = 0; i < COPIES; i++) {
     const item = document.createElement("span");
     item.classList.add("ticker__item");
-    item.innerHTML = `${config.text}<span class="ticker__dot" aria-hidden="true">·</span>`;
+    item.innerHTML = config.dot
+      ? `${config.text}<span class="ticker__dot" aria-hidden="true">·</span>`
+      : config.text;
     track.appendChild(item);
   }
 

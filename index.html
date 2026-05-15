@@ -2,8 +2,31 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
     <title>murakaeva.art</title>
+
+    <meta
+      name="description"
+      content="Светлана Муракаева — художник абстракционист"
+    />
+
+    <!-- OG section -->
+    <meta property="og:title" content="murakaeva.art" />
+    <meta
+      property="og:description"
+      content="Светлана Муракаева — художник абстракционист"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://murakaeva.art" />
+
+    <!-- Icon -->
+    <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="img/favicon/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,9 +42,15 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/contacts.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/lightbox.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
+    <!-- Navigation -->
     <header>
       <nav class="header__nav">
         <a href="#" class="nav__logo">murakaeva.art</a>
@@ -33,10 +62,11 @@
       </nav>
     </header>
     <main>
+      <!-- Hero -->
+      <!-- .hero__tickers are injected via ticker.js -->
       <section class="hero" id="hero">
-        <!-- .hero__tickers are injected via ticker.js -->
         <div class="hero__meta">
-          <span class="hero__meta-item">20 работ</span>
+          <span class="hero__meta-item">18 работ</span>
           <span class="hero__meta-item hero__meta-item--accent"
             >абстракция · 2026</span
           >
@@ -46,12 +76,116 @@
           <div class="hero__scroll-line"></div>
         </div>
       </section>
+      <!-- Gallery -->
+      <!-- .gallery__item are injected via gallery.js -->
+      <section class="section" id="gallery">
+        <div class="section__label reveal">Работы</div>
+        <div class="gallery__header">
+          <h2 class="gallery__title reveal">Галерея</h2>
+          <span class="gallery__count reveal reveal--d1"></span>
+        </div>
+        <div class="gallery__grid"></div>
+      </section>
+      <!-- About -->
+      <section class="section about" id="about">
+        <div class="about__quote">
+          <div class="section__label reveal">О художнике</div>
+          <h2 class="about__heading reveal reveal--d1">
+            Искусство,<br />
+            которое <em>говорит</em><br />
+            само за себя
+          </h2>
+        </div>
+        <div class="about__content reveal reveal--d2">
+          <p class="about__text">
+            Переношу на холст — свои мысли, настроение и фантазии. Я создаю не
+            просто картины — я создаю состояние души! Моя абстракция — это про
+            свободу, про внутренний импульс, про цвет, который говорит громче
+            слов! Работаю в смешанных техниках, потому что мне тесно в одном
+            формате. Мне не интересно быть понятной — мне важно быть настоящей.
+            Для меня искусство — это диалог без слов! Я не объясняю свои работы.
+            Мои картины не нужно «понимать» их нужно чувствовать! Они не для
+            всех, они для тех, кто чувствует глубже, чем смотрит! Все мои работы
+            в единственном экземпляре. Если вы готовы к искусству без фильтров —
+            добро пожаловать!<br /><em>Ваша МСС</em>
+          </p>
+        </div>
+      </section>
+      <!-- Contacts -->
+      <section class="section contacts" id="contacts">
+        <div class="contacts__left">
+          <div class="section__label reveal">Контакты</div>
+          <h2 class="contacts__heading reveal reveal--d1">
+            Свяжитесь<br />со мной
+          </h2>
+        </div>
+        <ul class="contacts__list reveal reveal--d2">
+          <li class="contacts__item">
+            <a href="tel:+79779770970" class="contacts__link">
+              <span class="contacts__type">Телефон</span>
+              <span class="contacts__value">+7 (977) 977-09-70</span>
+              <span class="contacts__arrow">→</span>
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a
+              href="https://t.me/murakaevass"
+              class="contacts__link"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="contacts__type">Telegram</span>
+              <span class="contacts__value">@murakaevass</span>
+              <span class="contacts__arrow">→</span>
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a
+              href="https://max.ru/+79779770970"
+              class="contacts__link"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="contacts__type">Max</span>
+              <span class="contacts__value">@murakaevass</span>
+              <span class="contacts__arrow">→</span>
+            </a>
+          </li>
+        </ul>
+      </section>
     </main>
+    <!-- Footer -->
     <footer class="footer">
-      <span class="footer__development">developed by { murakaev }</span>
-      <span class="footer__copyright">© 2026 Светлана Муракаева</span>
-      <span class="footer__domain">murakaeva.art</span>
+      <span class="footer__copyright">© 2026 murakaeva.art</span>
+      <span class="footer__development"
+        >developed by
+        <a href="https://murakaev.dev/" target="_blank" class="footer__link"
+          >{ murakaev }</a
+        ></span
+      >
     </footer>
+
+    <!-- Lightbox -->
+    <div
+      class="lightbox"
+      id="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Просмотр работы"
+    >
+      <button class="lightbox__close" aria-label="Закрыть">
+        закрыть · esc
+      </button>
+      <button class="lightbox__nav lightbox__nav--prev" aria-label="Предыдущая">
+        ‹
+      </button>
+      <img class="lightbox__img" alt="" />
+      <button class="lightbox__nav lightbox__nav--next" aria-label="Следующая">
+        ›
+      </button>
+      <div class="lightbox__count"></div>
+    </div>
+
     <script type="module" src="js/main.js"></script>
   </body>
 </html>

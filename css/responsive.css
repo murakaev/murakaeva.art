@@ -1,0 +1,393 @@
+:root {
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+html {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   2. iPad 13" (≥ 1024px) — portrait & landscape
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  :root {
+    --pad-x: 5vw;
+    --section-py: 80px;
+  }
+
+  .hero {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+
+  .ticker--firstname .ticker__item {
+    font-size: 10vw;
+  }
+
+  .ticker--lastname .ticker__item {
+    font-size: 14vw;
+  }
+
+  .ticker--sub .ticker__item {
+    font-size: 1.2vw;
+  }
+}
+
+/* iPad 13" landscape */
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+  .hero {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+
+  .ticker--lastname .ticker__item {
+    font-size: 12vw;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. iPad 11" (768px–1023px) — portrait & landscape
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    --pad-x: 32px;
+    --section-py: 72px;
+    --nav-h: 60px;
+  }
+
+  .hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    padding-bottom: calc(var(--nav-h) + var(--safe-bottom));
+  }
+
+  .ticker--firstname .ticker__item {
+    font-size: 13vw;
+  }
+
+  .ticker--lastname .ticker__item {
+    font-size: 18vw;
+    padding-bottom: 5vw;
+  }
+
+  .ticker--sub .ticker__item {
+    font-size: 2vw;
+    padding-top: 1.8vw;
+    padding-bottom: 1.4vw;
+  }
+
+  .gallery__grid {
+    columns: 2;
+    column-gap: 16px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about__content {
+    padding-top: 0;
+  }
+
+  .contacts {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .header__nav {
+    padding-top: env(safe-area-inset-top, 0px);
+    height: calc(var(--nav-h) + env(safe-area-inset-top, 0px));
+  }
+}
+
+/* iPad 11" landscape — можно оставить 2 колонки в about/contacts */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+  .about {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+
+  .contacts {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+
+  .ticker--firstname .ticker__item {
+    font-size: 11vw;
+  }
+
+  .ticker--lastname .ticker__item {
+    font-size: 15vw;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. iPhone Pro / Pro Max (≤ 767px)
+   iPhone 15 Pro:     393 × 852  (логических пикселей)
+   iPhone 15 Pro Max: 430 × 932
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  :root {
+    --pad-x: 20px;
+    --section-py: 56px;
+    --nav-h: 56px;
+  }
+
+  .header__nav {
+    padding-top: env(safe-area-inset-top, 0px);
+    height: calc(var(--nav-h) + env(safe-area-inset-top, 0px));
+  }
+
+  .nav__logo {
+    font-size: 10px;
+  }
+
+  .nav__list {
+    gap: 14px;
+  }
+
+  .nav__link {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+
+  .hero {
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding-top: calc(var(--nav-h) + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(56px + var(--safe-bottom));
+  }
+
+  .hero__tickers {
+    top: 50%;
+  }
+
+  .ticker--firstname .ticker__item {
+    font-size: 20vw;
+  }
+
+  .ticker--lastname .ticker__item {
+    font-size: 27vw;
+    padding-bottom: 7vw;
+  }
+
+  .ticker--sub .ticker__item {
+    font-size: 3vw;
+    padding-top: 2.5vw;
+    padding-bottom: 2vw;
+    letter-spacing: 0.2em;
+  }
+
+  .hero__meta {
+    bottom: calc(3vw + var(--safe-bottom));
+  }
+
+  .hero__scroll {
+    bottom: calc(28px + var(--safe-bottom));
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .hero__scroll-line {
+    height: 64px;
+  }
+
+  .gallery__grid {
+    columns: 1;
+    column-gap: 0;
+  }
+
+  .gallery__item {
+    margin-bottom: 12px;
+  }
+
+  .gallery__header {
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 28px;
+  }
+
+  .gallery__title {
+    font-size: clamp(28px, 7vw, 40px);
+  }
+
+  .section__label {
+    margin-bottom: 32px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about__content {
+    padding-top: 0;
+  }
+
+  .about__text {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .contacts {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .contacts__heading {
+    font-size: clamp(28px, 7vw, 40px);
+  }
+
+  .contacts__link {
+    padding: 18px 0;
+  }
+
+  .contacts__type {
+    width: 80px;
+    font-size: 9px;
+  }
+
+  .contacts__value {
+    font-size: 14px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    padding-bottom: calc(20px + var(--safe-bottom));
+  }
+
+  .lightbox__img {
+    max-width: 96vw;
+    max-height: 80dvh;
+  }
+
+  .lightbox__close {
+    top: calc(16px + env(safe-area-inset-top, 0px));
+    right: 20px;
+    font-size: 10px;
+  }
+
+  .lightbox__nav {
+    font-size: 28px;
+    padding: 12px 14px;
+  }
+
+  .lightbox__nav--prev {
+    left: 4px;
+  }
+
+  .lightbox__nav--next {
+    right: 4px;
+  }
+
+  .lightbox__count {
+    bottom: calc(20px + var(--safe-bottom));
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. Малые iPhone (≤ 390px) — Pro базовый и ниже
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 390px) {
+  :root {
+    --pad-x: 16px;
+    --section-py: 48px;
+  }
+
+  .ticker--firstname .ticker__item {
+    font-size: 18vw;
+  }
+
+  .ticker--lastname .ticker__item {
+    font-size: 24vw;
+  }
+
+  .ticker--sub .ticker__item {
+    font-size: 3.5vw;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. Тач-устройства: убираем hover-эффекты, которые "залипают"
+   -------------------------------------------------------------------------- */
+
+@media (hover: none) and (pointer: coarse) {
+  .gallery__item:hover img,
+  .gallery__item:hover svg {
+    transform: none;
+  }
+
+  .contacts__link:hover {
+    padding-left: 0;
+    color: var(--black);
+  }
+
+  .nav__logo:hover,
+  .nav__link:hover {
+    color: var(--gray);
+  }
+
+  .gallery__item:active img,
+  .gallery__item:active svg {
+    transform: scale(1.02);
+  }
+
+  .contacts__link:active {
+    color: var(--accent);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. Landscape на телефонах — Hero не должен быть слишком высоким
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .hero {
+    min-height: 100svh;
+    padding-top: calc(var(--nav-h) + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(40px + var(--safe-bottom));
+  }
+
+  .ticker--firstname .ticker__item {
+    font-size: 14vw;
+  }
+
+  .ticker--lastname .ticker__item {
+    font-size: 18vw;
+    padding-bottom: 4vw;
+  }
+
+  .ticker--sub .ticker__item {
+    font-size: 2.2vw;
+  }
+
+  .gallery__grid {
+    columns: 2;
+    column-gap: 12px;
+  }
+
+  .about {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .contacts {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
