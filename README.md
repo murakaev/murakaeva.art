@@ -4,6 +4,8 @@ Portfolio website for abstract artist Svetlana Murakaeva.
 
 **→ [murakaeva.art](https://murakaeva.art)**
 
+## Preview
+
 <img width="1360" height="951" alt="PREVIEW" src="https://github.com/user-attachments/assets/11228d66-db97-4a1a-9ca9-312ffad532cd" />
 
 ## About
