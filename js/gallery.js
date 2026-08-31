@@ -17,6 +17,15 @@ const WORKS = [
   { src: "img/img_16.WEBP", alt: "Работа 16", ph: ["#a5c4d4", "#7eacc8", 285] },
   { src: "img/img_17.WEBP", alt: "Работа 17", ph: ["#d4a5b4", "#c87e9a", 200] },
   { src: "img/img_18.WEBP", alt: "Работа 18", ph: ["#b4a5d4", "#9a7ec8", 340] },
+  { src: "img/img_19.JPG", alt: "Работа 19", ph: ["#d4b4c4", "#c89aac", 205] },
+  { src: "img/img_20.JPG", alt: "Работа 20", ph: ["#a5d4b4", "#7ec896", 315] },
+  { src: "img/img_21.JPG", alt: "Работа 21", ph: ["#c4a5d4", "#ac7eb4", 255] },
+  { src: "img/img_22.JPG", alt: "Работа 22", ph: ["#b4d4a5", "#96c87e", 300] },
+  { src: "img/img_23.JPG", alt: "Работа 23", ph: ["#d4a5b4", "#c87e9a", 190] },
+  { src: "img/img_24.JPG", alt: "Работа 24", ph: ["#a5c4d4", "#7eacc8", 265] },
+  { src: "img/img_25.JPG", alt: "Работа 25", ph: ["#b4a5d4", "#9a7ec8", 320] },
+  { src: "img/img_26.JPG", alt: "Работа 26", ph: ["#c4d4a5", "#accc7e", 215] },
+  { src: "img/img_27.JPG", alt: "Работа 27", ph: ["#d4b4a5", "#c89a7e", 300] },
 ];
 
 function makePlaceholder(bg, fg, h) {
